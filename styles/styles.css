@@ -479,4 +479,10 @@ ul {
     font-size: small;
     max-width: 100%;
   }
+  @media screen and (max-width: 1300px){
+    .container{
+      display: flex;
+      justify-items: center;
+    }
+  }
 }
