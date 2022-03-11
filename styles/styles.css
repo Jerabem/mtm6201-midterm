@@ -1,0 +1,482 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Custom CSS begins here*/
+/*cross-site css styles*/
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto; 
+  }
+
+/*nav styles*/
+.logo { 
+   font-size: large;
+}
+
+.nav { 
+    height: 100px; 
+}
+
+/*makes nav responsive*/
+.nav .flex{ 
+    justify-content: space-between; 
+}
+
+/*lines up nav ul horizontaly*/
+.nav ul {
+    display: flex;   
+}
+
+/*sets styles and positin of nav links */
+.nav a {
+    margin: 0 2.5vw;
+    text-decoration: none;
+    color: black;
+    font-size: small;
+}
+
+/*Adds underline on hover*/
+.nav a:hover{
+    border-bottom: 1px black solid;
+}
+
+/*used on both nav and footer to position content responsively*/
+.flex{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/*index page styling begins here*/
+.grid {
+    display: flex;
+    align-items: center;
+    display: grid; 
+    grid-template-columns: 0.3fr 1.3fr 1.3fr 0.3.0fr; 
+    grid-template-rows: 1.5fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "leotitle leoimg ivyimg ivytitle" 
+}
+
+.leotitle { 
+    grid-area: leotitle; 
+    display: flex;
+    justify-content: end;
+    font-size: 5vw;
+    }
+    
+.leoimg { 
+    grid-area: leoimg; 
+    max-width: 100%;
+    object-fit: cover;
+    height: 75vh;
+    }
+
+.ivyimg { 
+    grid-area: ivyimg; 
+    max-width: 100%;
+    object-fit: cover;
+    height: 75vh;
+}
+
+.ivytitle { 
+    grid-area: ivytitle; 
+    display: flex;
+    justify-content: flex-start;
+    font-size: 5vw;
+}
+
+/*Leo about page stylings begin here*/
+.grid2 {
+    display: grid; 
+    align-items: center;
+    grid-template-columns: 0.9fr 1.4fr 1.2fr 0.9fr; 
+    grid-template-rows: 1fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "Leotitleandquote leoimageabout leoabout leoimagestack"; 
+    }
+
+.leoimageabout { 
+    grid-area: leoimageabout; 
+    max-width: 100%;
+    object-fit: cover;
+    height: 75vh;
+    }
+
+.leotitleandquote {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.2fr 1.8fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "Leotitle2"
+      "leoquote"; 
+    grid-area: Leotitleandquote; 
+  }
+
+.leotitle2 { 
+    grid-area: Leotitle2;
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+    }
+
+.leoquote { 
+      grid-area: leoquote;
+      font-size: small; 
+      display: flex;
+      justify-content: center;
+    }
+
+  .leoabout {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.1fr 1.9fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "leotitleabout"
+      "leotextabout"; 
+    grid-area: leoabout; 
+  }
+
+  .leotitleabout { 
+      grid-area: leotitleabout; 
+    }
+  .leotextabout { 
+      grid-area: leotextabout; 
+      font-size: small;
+    }
+.leoimagestack { 
+      grid-area: leoimagestack; 
+      max-width: 100%;
+      max-height: 75vh;
+    }
+
+.leoimage2 {
+    grid-area: leoimagestack; 
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 1em;
+  
+}
+
+.leoimage3 {
+    grid-area: leoimagestack; 
+    max-width: 100%;
+    object-fit: cover;
+    margin-top: 1em;
+}
+
+/*Ivy about page stylings begin here*/
+.grid3 {
+    display: grid; 
+    align-items: center;
+    grid-template-columns: 0.9fr 1.4fr 0.6fr 0.9fr; 
+    grid-template-rows: 1fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "ivytitleandquote ivyimageabout ivyimagestack ivyabout"; 
+    }
+
+.ivyimageabout { 
+    grid-area: ivyimageabout; 
+    max-width: 100%;
+    object-fit: cover;
+    max-height: 75vh;
+    }
+
+.ivytitleandquote {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.2fr 1.8fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "ivytitle2"
+      "ivyquote"; 
+    grid-area: ivytitleandquote; 
+  }
+
+.ivytitle2 { 
+    grid-area: ivytitle2;
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+    }
+
+.ivyquote { 
+    grid-area: ivyquote;
+    font-size: small; 
+    display: flex;
+    justify-content: center;
+    }
+
+.ivyabout {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.1fr 1.9fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "ivytitleabout"
+      "ivytextabout"; 
+    grid-area: ivyabout; 
+  }
+
+.ivytitleabout { 
+      grid-area: ivytitleabout; 
+    }
+
+.ivytextabout { 
+      grid-area: ivytextabout; 
+      font-size: small;
+      max-height: 60vh;
+    }
+
+.ivyimagestack { 
+      grid-area: ivyimagestack; 
+      max-width: 100%;
+      object-fit: cover;
+      max-height: 75vh;
+    }
+      
+/*Footer stylings begin here*/
+.footer { 
+  height: 100px;
+} 
+
+.footer .flex{
+    justify-content: center;
+}
+
+.footer ul{
+    display: flex;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+    margin: 0 1vw;
+    font-size: small;
+}
+
+/*media styles begin here*/
+@media screen and (max-width: 1300px) {
+  .container {
+    max-width: 800px;
+    margin: 0 auto; 
+  }
+  .grid2 {
+    display: grid; 
+    grid-template-columns: 0.8fr 1.5fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 1em 2em; 
+    grid-template-areas: 
+      " leotitleandquote leoimageabout "
+      " leoimagestack leoabout "; 
+  }
+  .leotitleandquote {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "leotitle2"
+      "leoquote"; 
+    grid-area: leotitleandquote; 
+  }
+  .leotitle2 { 
+    grid-area: leotitle2; 
+  }
+
+  .leoquote { 
+    grid-area: leoquote;
+    font-size: small;
+   }
+
+  .leoimageabout { 
+    grid-area: leoimageabout; 
+    max-width: 75%;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+
+  .leoimagestack {
+    display: grid; 
+    justify-items: center;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 2em 3em; 
+    grid-template-areas: 
+      "leoimage2"
+      "leoimage3"; 
+    grid-area: leoimagestack; 
+  }
+
+  .leoimage2 { 
+    grid-area: leoimage2;
+    max-width: 100%;
+    object-fit: cover;
+   }
+
+  .leoimage3 { 
+    grid-area: leoimage3; 
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .leoabout {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.2fr 1.8fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "leotitleabout"
+      "leotextabout"; 
+    grid-area: leoabout; 
+  }
+
+  .leotitleabout {
+     grid-area: leotitleabout; 
+    }
+
+  .leotextabout { 
+    grid-area: leotextabout; 
+    font-size: small;
+    max-width: 100%;
+  }
+  .grid3 {
+    display: grid; 
+    grid-template-columns: 1.5fr 0.8fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 1em 2em; 
+    grid-template-areas: 
+      "ivyimageabout ivytitleandquote "
+      " ivyabout ivyimagestack"; 
+  }
+  .ivytitleandquote {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "ivytitle2"
+      "ivyquote"; 
+    grid-area: ivytitleandquote; 
+  }
+  .ivytitle2 { 
+    grid-area: ivytitle2; 
+  }
+
+  .ivyquote { 
+    grid-area: ivyquote;
+    font-size: small;
+   }
+
+  .ivyimageabout { 
+    grid-area: ivyimageabout; 
+    max-width: 75%;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+
+  .ivyimagestack {
+    display: grid; 
+    justify-items: center;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 2em 3em; 
+    grid-template-areas: 
+      "ivyimage2"
+      "ivyimage3"; 
+    grid-area: ivyimagestack; 
+  }
+
+  .ivyimage2 { 
+    grid-area: ivyimage2;
+    max-width: 100%;
+    object-fit: cover;
+   }
+
+  .ivyimage3 { 
+    grid-area: ivyimage3; 
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .ivyabout {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.2fr 1.8fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "ivytitleabout"
+      "ivytextabout"; 
+    grid-area: ivyabout; 
+  }
+
+  .ivytitleabout {
+     grid-area: ivytitleabout; 
+    }
+
+  .ivytextabout { 
+    grid-area: ivytextabout; 
+    font-size: small;
+    max-width: 100%;
+  }
+}
