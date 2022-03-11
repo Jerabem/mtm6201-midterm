@@ -490,25 +490,26 @@ ul {
     }
     .leotitle {
       order: 1;
-      font-size: 15vw;
+      font-size: 12vw;
     }
 
     .leoimg{
       order: 2;
       max-height: 400px;
-      padding: 0 10% 0 10%;
+      padding: 0 40% 0 40%;
     }
 
     .ivytitle {
       order:3;
-      font-size: 15vw;
+      font-size: 12vw;
       margin-top: 10%;
     }
 
     .ivyimg {
       order: 4;
       max-height: 400px;
-      padding: 0 10% 0 10%;
+      padding: 0 40% 0 40%;
+      margin-bottom: 15%;
     }
 
     .grid2 {
