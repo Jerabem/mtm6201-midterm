@@ -185,21 +185,25 @@ ul {
 
 .leoabout {
   display: grid;
+  align-items: start;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 1.9fr;
+  grid-template-rows: 1rem 1.9fr;
   gap: 1em 1em;
   grid-template-areas:
     "leotitleabout"
     "leotextabout";
   grid-area: leoabout;
+  height: 100%;
 }
 
 .leotitleabout {
   grid-area: leotitleabout;
+  height: 2em;
 }
 .leotextabout {
   grid-area: leotextabout;
   font-size: small;
+  max-height: 60vh;
 }
 .leoimagestack {
   grid-area: leoimagestack;
@@ -266,12 +270,14 @@ ul {
 .ivyabout {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 1.9fr;
+  grid-template-rows: 1rem 1.9fr;
   gap: 1em 1em;
+  align-items: start;
   grid-template-areas:
     "ivytitleabout"
     "ivytextabout";
   grid-area: ivyabout;
+  height: 100%;
 }
 
 .ivytitleabout {
@@ -322,7 +328,7 @@ ul {
     display: grid;
     grid-template-columns: 0.8fr 1.5fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1em 2em;
+    gap: 1em 1em;
     grid-template-areas:
       " leotitleandquote leoimageabout "
       " leoimagestack leoabout ";
@@ -331,7 +337,7 @@ ul {
   .leotitleandquote {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 3rem;
     gap: 1em 1em;
     grid-template-areas:
       "leotitle2"
@@ -352,7 +358,7 @@ ul {
   .leoimageabout {
     grid-area: leoimageabout;
     max-width: 100%;
-    max-height: 60vh;
+    max-height: 70vh;
     object-fit: cover;
   }
 
@@ -361,7 +367,7 @@ ul {
     justify-items: center;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 2em 3em;
+    gap: 1em 1em;
     grid-template-areas:
       "leoimage2"
       "leoimage3";
@@ -383,12 +389,13 @@ ul {
   .leoabout {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1.8fr;
+    grid-template-rows: 2rem 1.8fr;
     gap: 1em 1em;
     grid-template-areas:
       "leotitleabout"
       "leotextabout";
     grid-area: leoabout;
+    height: 100%;
   }
 
   .leotitleabout {
@@ -406,7 +413,7 @@ ul {
     justify-content: center;
     grid-template-columns: 1.5fr 0.8fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1em 2em;
+    gap: 1em 1em;
     grid-template-areas:
       "ivyimageabout ivytitleandquote "
       "ivyabout ivyimagestack";
@@ -415,7 +422,7 @@ ul {
   .ivytitleandquote {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 3rem;
     gap: 1em 1em;
     grid-template-areas:
       "ivytitle2"
@@ -436,7 +443,7 @@ ul {
   .ivyimageabout {
     grid-area: ivyimageabout;
     max-width: 100%;
-    max-height: 60vh;
+    max-height: 70vh;
     object-fit: cover;
   }
 
@@ -445,7 +452,7 @@ ul {
     justify-items: center;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 2em 3em;
+    gap: 1em 1em;
     grid-template-areas:
       "ivyimage2"
       "ivyimage3";
@@ -469,8 +476,6 @@ ul {
     grid-template-columns: 1fr;
     grid-template-rows: 2rem 1.8fr;
     gap: 1em 1em;
-
-    align-items: start;
     grid-template-areas:
       "ivytitleabout"
       "ivytextabout";
