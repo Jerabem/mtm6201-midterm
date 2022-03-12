@@ -148,7 +148,7 @@ ul {
   grid-template-columns: 0.9fr 1.4fr 1.2fr 0.9fr;
   grid-template-rows: 1fr;
   gap: 1em 1em;
-  grid-template-areas: "Leotitleandquote leoimageabout leoabout leoimagestack";
+  grid-template-areas: "leotitleandquote leoimageabout leoabout leoimagestack";
 }
 
 .leoimageabout {
@@ -164,13 +164,13 @@ ul {
   grid-template-rows: 0.2fr 1.8fr;
   gap: 1em 1em;
   grid-template-areas:
-    "Leotitle2"
+    "leotitle2"
     "leoquote";
-  grid-area: Leotitleandquote;
+  grid-area: leotitleandquote;
 }
 
 .leotitle2 {
-  grid-area: Leotitle2;
+  grid-area: leotitle2;
   display: flex;
   justify-content: center;
   font-size: 5vw;
@@ -351,7 +351,7 @@ ul {
 
   .leoimageabout {
     grid-area: leoimageabout;
-    max-width: 75%;
+    max-width: 100%;
     max-height: 60vh;
     object-fit: cover;
   }
@@ -403,12 +403,13 @@ ul {
 
   .grid3 {
     display: grid;
+    justify-content: center;
     grid-template-columns: 1.5fr 0.8fr;
     grid-template-rows: 1fr 1fr;
     gap: 1em 2em;
     grid-template-areas:
       "ivyimageabout ivytitleandquote "
-      " ivyabout ivyimagestack";
+      "ivyabout ivyimagestack";
   }
 
   .ivytitleandquote {
@@ -434,7 +435,7 @@ ul {
 
   .ivyimageabout {
     grid-area: ivyimageabout;
-    max-width: 75%;
+    max-width: 100%;
     max-height: 60vh;
     object-fit: cover;
   }
@@ -468,6 +469,7 @@ ul {
     grid-template-columns: 1fr;
     grid-template-rows: 2rem 1.8fr;
     gap: 1em 1em;
+
     align-items: start;
     grid-template-areas:
       "ivytitleabout"
@@ -489,6 +491,10 @@ ul {
   }
 
   @media screen and (max-width: 600px) {
+    .container {
+      max-width: 350px;
+      margin: 0 auto;
+    }
     .grid {
       display: flex;
       flex-wrap: wrap;
@@ -523,7 +529,9 @@ ul {
       flex-wrap: wrap;
       justify-content: center;
     }
-    .leotitleabout {
+
+    .leotitle2{
+      font-size: 20vw;
     }
 
     .leotextabout {
@@ -534,25 +542,11 @@ ul {
     .grid3 {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .ivyabout{
-      width: 80%
-      margin: 0 auto;
     }
 
     .ivytitle2 {
       font-size: 20vw;
     }
 
-    .ivytitleabout {
-     
-    }
-
-    .ivytextabout {
-      max-width: 70%;
-    
-    }
   }
 }
