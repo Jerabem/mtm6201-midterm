@@ -48,6 +48,54 @@ table {
 }
 
 /*Custom CSS begins here*/
+
+
+/*Animations begin here*/
+@keyframes beat {
+  0% {
+    color: #000000;
+  }
+  50%{
+  color: #000000;
+  }
+  100% {
+    color: #ff00007a;
+  }
+}
+
+@keyframes grow {
+  0% {
+    
+    color: #ff00007a;
+  }
+  50% {
+    transform: translate(20px, 0px);
+    transform: scale(1.1, 1.1);
+    color: #ff00007a;
+  }
+  100% {
+    color: #ff00007a;
+  }
+}
+
+/*orginal state criteria 1*/
+h1 {
+  color: #000000;
+  animation-name: beat;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition-timing-function: ease-out;
+}
+
+/* Grow and stretch heartmore logo */
+h1:active {
+  animation: grow 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition-timing-function: ease-out;
+}
+
 /*Cross-site css styles*/
 body {
   background-color: rgb(255, 255, 255);
@@ -65,7 +113,7 @@ ul {
 
 /*nav styles*/
 .logo {
-  font-size: large;
+  font-size:large;
 }
 
 .nav {
