@@ -101,10 +101,12 @@ body {
   background-color: rgb(255, 255, 255);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  cursor: default;
 }
 ul {
   list-style: none;
 }
+
 
 .container {
   max-width: 1400px;
@@ -114,6 +116,7 @@ ul {
 /*nav styles*/
 .logo {
   font-size:large;
+  padding-left: 10px;
 }
 
 .nav {
@@ -548,6 +551,10 @@ ul {
       max-width: 350px;
       margin: 0 auto;
     }
+    .logo{ 
+      padding-left: 0;
+    }
+
     .grid {
       display: flex;
       flex-wrap: wrap;
