@@ -75,10 +75,44 @@ table {
   }
   100% {
     color: #ff00007a;
+  } 
+}
+
+
+@keyframes heartbeat2 {
+  0% {
+    
+    color: #ff00007a;
+  }
+  50% {
+    transform: translate(20px, 0px);
+    transform: scale(1.1, 1.1);
+    color: #ff00007a;
+  }
+  100% {
+    color: #ff00007a;
   }
 }
 
-/*orginal state criteria 1*/
+/*logo color change animation*/
+.nav a {
+  color: #000000;
+  animation-name: blush;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition-timing-function: ease-out;
+}
+
+.nav a:hover {
+  animation: heartbeat2 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition-timing-function: ease-out;
+  /*Adds underline on hover*/
+  border-bottom: 1px black solid;
+}
+/*logo color change animation*/
 h1 {
   color: #000000;
   animation-name: blush;
@@ -106,7 +140,6 @@ body {
 ul {
   list-style: none;
 }
-
 
 .container {
   max-width: 1400px;
@@ -139,11 +172,6 @@ ul {
   text-decoration: none;
   color: black;
   font-size: small;
-}
-
-/*Adds underline on hover*/
-.nav a:hover {
-  border-bottom: 1px black solid;
 }
 
 /*used on both nav and footer to position content responsively*/
