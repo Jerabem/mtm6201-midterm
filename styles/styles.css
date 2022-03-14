@@ -51,7 +51,7 @@ table {
 
 
 /*Animations begin here*/
-@keyframes beat {
+@keyframes  blush{
   0% {
     color: #000000;
   }
@@ -63,7 +63,7 @@ table {
   }
 }
 
-@keyframes grow {
+@keyframes heartbeat {
   0% {
     
     color: #ff00007a;
@@ -81,7 +81,7 @@ table {
 /*orginal state criteria 1*/
 h1 {
   color: #000000;
-  animation-name: beat;
+  animation-name: blush;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -90,7 +90,7 @@ h1 {
 
 /* Grow and stretch heartmore logo */
 h1:active {
-  animation: grow 0.8s;
+  animation: heartbeat 0.8s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   transition-timing-function: ease-out;
