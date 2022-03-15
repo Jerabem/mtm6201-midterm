@@ -95,23 +95,25 @@ table {
 }
 
 /*logo color change animation*/
-.nav a {
+.nav.flex a {
   color: #000000;
   animation-name: blush;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   transition-timing-function: ease-out;
-}
 
-.nav a:hover {
-  animation: heartbeat2 0.8s;
+}
+ /*Adds underline on hover*/
+.nav.flex a:hover {
+  animation: heartbeat 0.8s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   transition-timing-function: ease-out;
-  /*Adds underline on hover*/
-  border-bottom: 1px black solid;
+  border-bottom: 1px rgba(146, 14, 14, 0.582) solid;
+  transition: border 0.4s;
 }
+
 /*logo color change animation*/
 h1 {
   color: #000000;
@@ -292,14 +294,16 @@ ul {
 
 .leoimage2 {
   grid-area: leoimagestack;
-  max-width: 100%;
+  max-width: 90%;
+  max-height: 50%;
   object-fit: cover;
   margin-bottom: 1em;
 }
 
 .leoimage3 {
   grid-area: leoimagestack;
-  max-width: 100%;
+  max-width: 90%;
+  max-height: 50%;
   object-fit: cover;
   margin-top: 1em;
 }
@@ -308,7 +312,7 @@ ul {
 .grid3 {
   display: grid;
   align-items: center;
-  grid-template-columns: 0.9fr 1.4fr 0.6fr 0.9fr;
+  grid-template-columns: 0.9fr 1.4fr 0.9fr 1.2fr;
   grid-template-rows: 1fr;
   gap: 1em 1em;
   grid-template-areas: "ivytitleandquote ivyimageabout ivyimagestack ivyabout";
@@ -318,7 +322,7 @@ ul {
   grid-area: ivyimageabout;
   max-width: 100%;
   object-fit: cover;
-  max-height: 75vh;
+  height: 75vh;
 }
 
 .ivytitleandquote {
@@ -348,10 +352,10 @@ ul {
 
 .ivyabout {
   display: grid;
+  align-items: start;
   grid-template-columns: 1fr;
   grid-template-rows: 1rem 1.9fr;
   gap: 1em 1em;
-  align-items: start;
   grid-template-areas:
     "ivytitleabout"
     "ivytextabout";
@@ -361,19 +365,32 @@ ul {
 
 .ivytitleabout {
   grid-area: ivytitleabout;
+  height: 2em;
 }
-
 .ivytextabout {
   grid-area: ivytextabout;
   font-size: small;
   max-height: 60vh;
 }
-
 .ivyimagestack {
   grid-area: ivyimagestack;
   max-width: 100%;
-  object-fit: cover;
   max-height: 75vh;
+}
+
+.ivyimage2 {
+  grid-area: leoimagestack;
+  max-width: 93%;
+  max-height: 45%;
+  object-fit: cover;
+}
+
+.ivyimage3 {
+  grid-area: leoimagestack;
+  max-width: 93%;
+  max-height: 45%;
+  object-fit: cover;
+  margin-top: 1em;
 }
 
 /*Footer stylings begin here*/
@@ -401,6 +418,15 @@ ul {
   .container {
     max-width: 800px;
     margin: 0 auto;
+  }
+  .footer{
+    margin-top: 0;
+  }
+  .footer .ivy {
+    margin-top: 30vh;
+  }
+  .footer .leo {
+    margin-top: 30vh;
   }
 
   .grid2 {
@@ -456,13 +482,17 @@ ul {
   .leoimage2 {
     grid-area: leoimage2;
     max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
+    margin: 0;
   }
 
   .leoimage3 {
     grid-area: leoimage3;
     max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
+    margin: 0;
   }
 
   .leoabout {
@@ -541,13 +571,17 @@ ul {
   .ivyimage2 {
     grid-area: ivyimage2;
     max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
+    margin: 0;
   }
 
   .ivyimage3 {
     grid-area: ivyimage3;
     max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
+    margin: 0;
   }
 
   .ivyabout {
@@ -579,8 +613,21 @@ ul {
       max-width: 350px;
       margin: 0 auto;
     }
+
     .logo{ 
       padding-left: 0;
+    }
+
+    .footer {
+      margin-top: 0;
+    }
+
+    .footer .ivy  {
+      margin-top: 30vh;
+    }
+
+    .footer .leo {
+      margin-top: 30vh;
     }
 
     .grid {
@@ -593,11 +640,11 @@ ul {
       font-size: 12vw;
     }
 
-    .leoimg{
+    .leoimg {
       order: 2;
-      max-height: 400px;
-      padding: 0 40% 0 40%;
+      max-height: 400px; 
     }
+    
 
     .ivytitle {
       order:3;
@@ -608,7 +655,6 @@ ul {
     .ivyimg {
       order: 4;
       max-height: 400px;
-      padding: 0 40% 0 40%;
       margin-bottom: 15%;
     }
 
@@ -637,4 +683,5 @@ ul {
     }
 
   }
+
 }
