@@ -51,6 +51,7 @@ table {
 
 
 /*Animations begin here*/
+/*This sets the keyframes for the blush animation changing colour*/
 @keyframes  blush{
   0% {
     color: #000000;
@@ -62,7 +63,7 @@ table {
     color: #ff00007a;
   }
 }
-
+/*These are the keyframes for the active animation changing size and maintaing red color on the logo/H1 */
 @keyframes heartbeat {
   0% {
     
@@ -78,7 +79,7 @@ table {
   } 
 }
 
-
+/*These are the keyframes for the active animation changing size and maintaing red color on the nav links*/
 @keyframes heartbeat2 {
   0% {
     
@@ -104,9 +105,9 @@ table {
   transition-timing-function: ease-out;
 
 }
- /*Adds underline on hover*/
+ /*Adds underline on hover and sets the nav links to animate on hover infinitley */
 .nav.flex a:hover {
-  animation: heartbeat 0.8s;
+  animation: heartbeat2 0.8s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   transition-timing-function: ease-out;
@@ -114,7 +115,7 @@ table {
   transition: border 0.4s;
 }
 
-/*logo color change animation*/
+/*stes animation properties for the h1 color change */
 h1 {
   color: #000000;
   animation-name: blush;
@@ -124,7 +125,7 @@ h1 {
   transition-timing-function: ease-out;
 }
 
-/* Grow and stretch heartmore logo */
+/* Grows and stretchs heartmore logo when in teh active state */
 h1:active {
   animation: heartbeat 0.8s;
   animation-iteration-count: infinite;
@@ -133,32 +134,35 @@ h1:active {
 }
 
 /*Cross-site css styles*/
+/*This stes the body background, font and kepps the cursor conistent*/
 body {
   background-color: rgb(255, 255, 255);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
   cursor: default;
 }
+/*removes all styles for unordered lists acrros the site */
 ul {
   list-style: none;
 }
-
+/*container structure an dmax width on desktop*/
 .container {
   max-width: 1400px;
   margin: 0 auto;
 }
 
 /*nav styles*/
+/*sets logo size and keeps gives it space */
 .logo {
   font-size:large;
   padding-left: 10px;
 }
-
+/*sets the heigh of the navigation*/
 .nav {
   height: 100px;
 }
 
-/*makes nav responsive*/
+/*makes nav responsive and positions the links and logo on either side of the nav*/
 .nav .flex {
   justify-content: space-between;
 }
@@ -168,7 +172,7 @@ ul {
   display: flex;
 }
 
-/*sets styles and positin of nav links */
+/*sets styles and position of nav links*/
 .nav a {
   margin: 0 2.5vw;
   text-decoration: none;
@@ -184,6 +188,7 @@ ul {
 }
 
 /*index page styling begins here*/
+/*Sets up the grid for the home page */
 .grid {
   display: flex;
   align-items: center;
@@ -194,20 +199,21 @@ ul {
   grid-template-areas: "leotitle leoimg ivyimg ivytitle";
 }
 
+/*postions and styles h2 title leo*/
 .leotitle {
   grid-area: leotitle;
   display: flex;
   justify-content: end;
   font-size: 5vw;
 }
-
+/*positions and styles leo image on home page*/
 .leoimg {
   grid-area: leoimg;
   max-width: 100%;
   object-fit: cover;
   height: 75vh;
 }
-
+/*positions and styles ivy image on home page*/
 .ivyimg {
   grid-area: ivyimg;
   max-width: 100%;
@@ -215,6 +221,7 @@ ul {
   height: 75vh;
 }
 
+/*positions and styles h2 title ivy*/
 .ivytitle {
   grid-area: ivytitle;
   display: flex;
@@ -223,6 +230,7 @@ ul {
 }
 
 /*Leo about page stylings begin here*/
+/*Sets up the grid for the leo about page*/
 .grid2 {
   display: grid;
   align-items: center;
@@ -231,14 +239,14 @@ ul {
   gap: 1em 1em;
   grid-template-areas: "leotitleandquote leoimageabout leoabout leoimagestack";
 }
-
+/*positions and styles leo about image on about page*/
 .leoimageabout {
   grid-area: leoimageabout;
   max-width: 100%;
   object-fit: cover;
   height: 75vh;
 }
-
+/*stes up nested grid for leo title and quote */
 .leotitleandquote {
   display: grid;
   grid-template-columns: 1fr;
@@ -249,7 +257,7 @@ ul {
     "leoquote";
   grid-area: leotitleandquote;
 }
-
+/*positions and styles leo h2 title and quote on about page*/
 .leotitle2 {
   grid-area: leotitle2;
   display: flex;
@@ -263,7 +271,7 @@ ul {
   display: flex;
   justify-content: center;
 }
-
+/*sets up nested grid for the about title and text*/
 .leoabout {
   display: grid;
   align-items: start;
@@ -276,22 +284,24 @@ ul {
   grid-area: leoabout;
   height: 100%;
 }
-
+/*positions and styles leo about title*/
 .leotitleabout {
   grid-area: leotitleabout;
   height: 2em;
 }
+/*positions and styles leo about text*/
 .leotextabout {
   grid-area: leotextabout;
   font-size: small;
   max-height: 60vh;
 }
+/*sets up nested grid for leo about image stack */
 .leoimagestack {
   grid-area: leoimagestack;
   max-width: 100%;
   max-height: 75vh;
 }
-
+/*positions and styles leo about images*/
 .leoimage2 {
   grid-area: leoimagestack;
   max-width: 90%;
@@ -309,6 +319,7 @@ ul {
 }
 
 /*Ivy about page stylings begin here*/
+/*Sets up the grid for the ivy about page*/
 .grid3 {
   display: grid;
   align-items: center;
@@ -317,14 +328,14 @@ ul {
   gap: 1em 1em;
   grid-template-areas: "ivytitleandquote ivyimageabout ivyimagestack ivyabout";
 }
-
+/*postions and styles ivy about image*/
 .ivyimageabout {
   grid-area: ivyimageabout;
   max-width: 100%;
   object-fit: cover;
   height: 75vh;
 }
-
+/*sets up nested grid for ivy title and quote*/
 .ivytitleandquote {
   display: grid;
   grid-template-columns: 1fr;
@@ -335,7 +346,7 @@ ul {
     "ivyquote";
   grid-area: ivytitleandquote;
 }
-
+/*positions and styles ivy h2 title and quote*/
 .ivytitle2 {
   grid-area: ivytitle2;
   display: flex;
@@ -349,7 +360,7 @@ ul {
   display: flex;
   justify-content: center;
 }
-
+/*sets up nested grid for ivy text*/
 .ivyabout {
   display: grid;
   align-items: start;
@@ -362,22 +373,24 @@ ul {
   grid-area: ivyabout;
   height: 100%;
 }
-
+/*positions and styles ivy about text title and paragraph text*/
 .ivytitleabout {
   grid-area: ivytitleabout;
   height: 2em;
 }
+
 .ivytextabout {
   grid-area: ivytextabout;
   font-size: small;
   max-height: 60vh;
 }
+/*Sets up nested grid for ivey about page image stack*/
 .ivyimagestack {
   grid-area: ivyimagestack;
   max-width: 100%;
   max-height: 75vh;
 }
-
+/*positions and styles ivy image stack*/
 .ivyimage2 {
   grid-area: leoimagestack;
   max-width: 93%;
@@ -394,18 +407,19 @@ ul {
 }
 
 /*Footer stylings begin here*/
+/*sets footer height*/
 .footer {
   height: 100px;
 }
-
+/*positions footer links*/
 .footer .flex {
   justify-content: center;
 }
-
+/*positions footer links side-by-side*/
 .footer ul {
   display: flex;
 }
-
+/*Styles and positions footer links, adds spacing and removes default link stylings*/
 .footer a {
   text-decoration: none;
   color: black;
@@ -415,278 +429,255 @@ ul {
 
 /*media styles begin here*/
 @media screen and (max-width: 1300px) {
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .footer{
-    margin-top: 0;
-  }
-  .footer .ivy {
-    margin-top: 30vh;
-  }
-  .footer .leo {
-    margin-top: 30vh;
-  }
+/*sets container width for tablet with auto side margins*/
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/*sets up the grid for tablet size layout on teh leo about page*/
+.grid2 {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em 1em;
+  grid-template-areas:
+    " leotitleandquote leoimageabout "
+    " leoimagestack leoabout ";
+}
+/*sets nested grid for leo title and quote*/
+.leotitleandquote {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3rem;
+  gap: 1em 1em;
+  grid-template-areas:
+    "leotitle2"
+    "leoquote";
+  grid-area: leotitleandquote;
+}
+/*sets grid area for leo about title and size style*/
+.leotitle2 {
+  grid-area: leotitle2;
+  font-size: 10vw;
+}
+/*sets grid area for leo quote and size styling*/
+.leoquote {
+  grid-area: leoquote;
+  font-size: small;
+}
+/*sets grid area for leo about image and size styling*/
+.leoimageabout {
+  grid-area: leoimageabout;
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+}
+/*sets nested grid area for leo about image stack tablet*/
+.leoimagestack {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em 1em;
+  grid-template-areas:
+    "leoimage2"
+    "leoimage3";
+  grid-area: leoimagestack;
+}
+/*sets sizing and grid area for leo about stacked images tablet*/
+.leoimage2 {
+  grid-area: leoimage2;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
 
-  .grid2 {
-    display: grid;
-    grid-template-columns: 0.8fr 1.5fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1em 1em;
-    grid-template-areas:
-      " leotitleandquote leoimageabout "
-      " leoimagestack leoabout ";
-  }
+.leoimage3 {
+  grid-area: leoimage3;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+/*sets up nested grid for leo about paragraph*/
+.leoabout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2rem 1.8fr;
+  gap: 1em 1em;
+  grid-template-areas:
+    "leotitleabout"
+    "leotextabout";
+  grid-area: leoabout;
+  height: 100%;
+}
+/*sets grid area for leo title on paragraph*/
+.leotitleabout {
+  grid-area: leotitleabout;
+}
+/*sets grid area for leo pargraph text and size styling*/
+.leotextabout {
+  grid-area: leotextabout;
+  font-size: small;
+  max-width: 100%;
+}
+/*sets up grid for ivy about page tablet layout*/
+.grid3 {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1.5fr 0.8fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em 1em;
+  grid-template-areas:
+    "ivyimageabout ivytitleandquote "
+    "ivyabout ivyimagestack";
+}
+/*sets up grid for ivy title and quote layout*/
+.ivytitleandquote {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3rem;
+  gap: 1em 1em;
+  grid-template-areas:
+    "ivytitle2"
+    "ivyquote";
+  grid-area: ivytitleandquote;
+}
+/*sets grid area for ivy tilte and quote and size styling*/
+.ivytitle2 {
+  grid-area: ivytitle2;
+  font-size: 10vw;
+}
 
-  .leotitleandquote {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3rem;
-    gap: 1em 1em;
-    grid-template-areas:
-      "leotitle2"
-      "leoquote";
-    grid-area: leotitleandquote;
-  }
+.ivyquote {
+  grid-area: ivyquote;
+  font-size: small;
+}
+/*sets grid area for ivy about image and size styling*/
+.ivyimageabout {
+  grid-area: ivyimageabout;
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+}
+/*sets up nested grid ivy images stack tablet*/
+.ivyimagestack {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em 1em;
+  grid-template-areas:
+    "ivyimage2"
+    "ivyimage3";
+  grid-area: ivyimagestack;
+}
+/*sets grid area for ivy stacked images sets size styling*/
+.ivyimage2 {
+  grid-area: ivyimage2;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
 
-  .leotitle2 {
-    grid-area: leotitle2;
-    font-size: 10vw;
-  }
+.ivyimage3 {
+  grid-area: ivyimage3;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+/*sets up nested grid for ivy about text*/
+.ivyabout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2rem 1.8fr;
+  gap: 1em 1em;
+  grid-template-areas:
+    "ivytitleabout"
+    "ivytextabout";
+  grid-area: ivyabout;
+  height: 100%;
+}
+/*sets grid area and size styling for ivy about title and paragraph text*/
+.ivytitleabout {
+  grid-area: ivytitleabout;  
+}
 
-  .leoquote {
-    grid-area: leoquote;
-    font-size: small;
-  }
+.ivytextabout {
+  grid-area: ivytextabout;
+  font-size: small;
+  max-width: 100%;    
+}
+/*media qury for mobile sizing*/
+@media screen and (max-width: 600px) {
+/*sets container width and auto side margins*/
+.container {
+  max-width: 350px;
+  margin: 0 auto;
+}
+/*overites padding on logo from previous screen sizes*/
+.logo{ 
+  padding-left: 0;
+}
+/*adds flex properties to grid, wraps items and centers content*/
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/*changes order and text styling for leo title on home page*/
+.leotitle {
+  order: 1;
+  font-size: 12vw;
+}
 
-  .leoimageabout {
-    grid-area: leoimageabout;
-    max-width: 100%;
-    max-height: 70vh;
-    object-fit: cover;
-  }
+.leoimg {
+  order: 2;
+  max-height: 400px; 
+}
+/*overites max-height from previous grid*/
+.leoimagestack{
+  max-height: 100%;
+}
+/*changes order and text styling for ivy title and image on home page*/
+.ivytitle {
+  order:3;
+  font-size: 12vw;
+  margin-top: 10%;
+}
 
-  .leoimagestack {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1em 1em;
-    grid-template-areas:
-      "leoimage2"
-      "leoimage3";
-    grid-area: leoimagestack;
-  }
+.ivyimg {
+  order: 4;
+  max-height: 400px;
+  margin-bottom: 15%;
+}
+/*overites max-height from previous grid*/
+.ivyimagestack{
+  max-height:100%;
+}
+/*adds flex properties to grid, wraps items and centers content*/
+.grid2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/*styles leo about title for mobile*/
+.leotitle2{
+  font-size: 20vw;
+}
+/*adds flex properties to grid, wraps items*/
+.grid3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*styles leo about title for mobile*/
+.ivytitle2 {
+  font-size: 20vw;
+}
 
-  .leoimage2 {
-    grid-area: leoimage2;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    margin: 0;
-  }
-
-  .leoimage3 {
-    grid-area: leoimage3;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    margin: 0;
-  }
-
-  .leoabout {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2rem 1.8fr;
-    gap: 1em 1em;
-    grid-template-areas:
-      "leotitleabout"
-      "leotextabout";
-    grid-area: leoabout;
-    height: 100%;
-  }
-
-  .leotitleabout {
-    grid-area: leotitleabout;
-  }
-
-  .leotextabout {
-    grid-area: leotextabout;
-    font-size: small;
-    max-width: 100%;
-  }
-
-  .grid3 {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1.5fr 0.8fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1em 1em;
-    grid-template-areas:
-      "ivyimageabout ivytitleandquote "
-      "ivyabout ivyimagestack";
-  }
-
-  .ivytitleandquote {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3rem;
-    gap: 1em 1em;
-    grid-template-areas:
-      "ivytitle2"
-      "ivyquote";
-    grid-area: ivytitleandquote;
-  }
-
-  .ivytitle2 {
-    grid-area: ivytitle2;
-    font-size: 10vw;
-  }
-
-  .ivyquote {
-    grid-area: ivyquote;
-    font-size: small;
-  }
-
-  .ivyimageabout {
-    grid-area: ivyimageabout;
-    max-width: 100%;
-    max-height: 70vh;
-    object-fit: cover;
-  }
-
-  .ivyimagestack {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1em 1em;
-    grid-template-areas:
-      "ivyimage2"
-      "ivyimage3";
-    grid-area: ivyimagestack;
-  }
-
-  .ivyimage2 {
-    grid-area: ivyimage2;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    margin: 0;
-  }
-
-  .ivyimage3 {
-    grid-area: ivyimage3;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    margin: 0;
-  }
-
-  .ivyabout {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2rem 1.8fr;
-    gap: 1em 1em;
-    grid-template-areas:
-      "ivytitleabout"
-      "ivytextabout";
-    grid-area: ivyabout;
-    height: 100%;
-  }
-
-  .ivytitleabout {
-    grid-area: ivytitleabout;
-    
-  }
-
-  .ivytextabout {
-    grid-area: ivytextabout;
-    font-size: small;
-    max-width: 100%;
-    
-  }
-
-  @media screen and (max-width: 600px) {
-    .container {
-      max-width: 350px;
-      margin: 0 auto;
-
-    }
-
-    .logo{ 
-      padding-left: 0;
-    }
-
-    .footer {
-      margin-top: 0;
-    }
-
-    .footer .ivy  {
-      margin-top: 30vh;
-    }
-
-    .footer .leo {
-      margin-top: 30vh;
-    }
-
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .leotitle {
-      order: 1;
-      font-size: 12vw;
-    }
-
-    .leoimg {
-      order: 2;
-      max-height: 400px; 
-    }
-    
-    .leoimagestack{
-      max-height: 100%;
-    }
-    .ivytitle {
-      order:3;
-      font-size: 12vw;
-      margin-top: 10%;
-    }
-
-    .ivyimg {
-      order: 4;
-      max-height: 400px;
-      margin-bottom: 15%;
-    }
-    .ivyimagestack{
-      max-height:100%;
-    }
-    .grid2 {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .leotitle2{
-      font-size: 20vw;
-    }
-
-    .leotextabout {
-      font-size: small;
-      max-width: 100%;
-    }
-
-    .grid3 {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .ivytitle2 {
-      font-size: 20vw;
-    }
-
-  }
+}
 
 }
