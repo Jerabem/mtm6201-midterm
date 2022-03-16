@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link to styleheet -->
     <link rel="stylesheet" href="styles/styles.css">
     <title>Leo & Ivy</title>
 </head>
 <body> 
-     <!-- Main Navigation -->
+     <!-- Header navigation semantic tags and classes for container and sub classes of of flex are added to provid specific targeting and simplify css styles-->
      <header class="nav">
         <div class="container flex">
          <h1 class="logo">HEARTMORE</h1>
@@ -21,23 +22,29 @@
          </nav>
         </div> 
      </header>
+     <!-- Main section semantic tag -->
      <main>
+    <!--divs with added class for containers well as classes added for grid to be used in css styles --> 
         <div class="container">
             <div class="grid2">
                 <div class="leotitleandquote">
                     <h2 class="leotitle2">LEO</h2>  
                     <p class="leoquote">"Beautiful planets and rainbows for me"</p>
                 </div>
+                <!-- picture tag used to provide media breakpoints and multiple sources for images based on minimum screen width -->
                     <picture class="leoimageabout">
                     <source srcset="images/LEO4-1052x1402.jpg"
                         media="(min-width: 600px)"/> 
                     <img class="leoimageabout" src="images/LEO4-526x701.jpg" alt="ginger in a blue suit">
                      </picture>
+            <!--div with class leoabout to allow for css grid-->
                 <div class="leoabout">
                     <h3 class="leotitleabout">ABOUT LEO</h3>
                         <p class= "leotextabout"> Cat ipsum dolor sit amet, spend all night ensuring people don't sleep sleep all day lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back yet plan your travel cat fur is the new black . As lick i the shoes soft kitty warm kitty little ball of furr. Destroy house in 5 seconds wake up human for food at 4am. All of a sudden cat goes crazy licks your face for hiss at vacuum cleaner. Sit in a box for hours lick the plastic bag in the middle of the night i crawl onto your chest and purr gently to help you sleep, i could pee on this if i had the energy. Lick yarn hanging out of own butt cats go for world domination, for just going to dip my paw in your coffee and do a taste test - oh never mind i forgot i don't like coffee - you can have that back now so sleep on dog bed, force dog to sleep on floor and scratch the box but why must they do that. Chase the pig around the house murf pratt ungow ungow, meow meow pee in shoe. Litter kitter kitty litty little kitten big roar roar feed me. Sleeps on my head mark territory purr while eating sniff sniff, gimme attention gimme attention gimme attention gimme attention gimme attention gimme attention just kidding i don't want it anymore meow bye sit in box. Cat slap dog in face. Purr as loud as possible, be the most annoying cat that you can, and, knock everything off the table hack, yet thinking longingly about tuna brine so go crazy with excitement when plates are clanked together signalling the arrival of cat food.</p>        
                 </div>
+                 <!--div with class leoimagestack to allow for css grid-->
                 <div class="leoimagestack">
+                     <!-- picture tags used to provide media breakpoints and multiple sources for images based on minimum screen width -->
                     <picture class="leoimage2">
                         <source srcset="images/LEO3-1052x1402.jpg"
                             media="(min-width: 600px)"/> 
@@ -52,7 +59,9 @@
             </div>
         </div>
     </main>
+<!-- Footer semantic tag plus sub class of leo to allow for indiviudal targeting in css-->
 <footer class="footer leo">
+    <!--div with class for container and sub class of flex added to provid specific targeting and simplify css styles-->
     <div class="container flex">
         <ul>
             <li><a href="url">instagram</a></li>
